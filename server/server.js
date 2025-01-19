@@ -41,14 +41,9 @@ app.use(express.urlencoded({ extended: false })); // Parse URL-encoded data
 app.use(cookieParser());
 app.use(morgan);
 
-const corsOptions = {
-  origin: NODE_ENV === 'production' ? CLIENT_URL : 'http://localhost:8000',
-  credentials: true,
-};
-
 app.use(
   cors({
-    origin: 'http://localhost:8000', // Allow specific origin
+    origin: NODE_ENV === 'production' ? CLIENT_URL : 'http://localhost:8000', // Allow specific origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true, // Allow credentials (cookies, authorization headers)
