@@ -1,6 +1,5 @@
-// middlewares/loggingMiddleware.js
 const morgan = require('morgan');
-const logger = require('../config/logger'); // Winston for logging
+const logger = require('../config/logger'); 
 
 const requestLogger = (tokens, req, res) => {
   logger.info(

@@ -12,11 +12,11 @@ const FileInputButton = ({
     <>
       <input
         type="file"
-        ref={fileInputRef} // Attach the ref here
+        ref={fileInputRef}
         accept={acceptFileType}
         className="hidden"
         onChange={onFileChange}
-        multiple={multiple} // Add multiple attribute if needed
+        multiple={multiple}
       />
       <button
         onClick={onFileInputClick}
@@ -24,7 +24,6 @@ const FileInputButton = ({
         disabled={isUploading}
       >
         <span>Choose File</span>{' '}
-        {/* You can make the label dynamic based on file type */}
       </button>
     </>
   );

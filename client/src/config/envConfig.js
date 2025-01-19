@@ -1,5 +1,3 @@
-// src/config/envConfig.js
-
 // Set the site name
 export const siteName = process.env.PUBLIC_SITE_NAME || 'InventoryFlow';
 // Set API URL

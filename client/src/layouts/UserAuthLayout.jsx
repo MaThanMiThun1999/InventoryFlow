@@ -1,5 +1,3 @@
-// src/layouts/UserAuthLayout.js
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import ParticlesBackground from '../components/base/ParticlesBackground';
 import { Toaster } from 'react-hot-toast';

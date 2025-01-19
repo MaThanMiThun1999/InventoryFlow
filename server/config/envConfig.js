@@ -6,7 +6,15 @@ if (
   !process.env.JWT_SECRET &&
   !process.env.CLIENT_URL &&
   !process.env.MAILER_EMAILID &&
-  !process.env.MAILER_PASSWORD
+  !process.env.MAILER_PASSWORD &&
+  !process.env.NODE_ENV &&
+  !process.env.VERSION &&
+  !process.env.CLOUDINARY_CLOUD_NAME &&
+  !process.env.CLOUDINARY_API_KEY &&
+  !process.env.CLOUDINARY_API_SECRET &&
+  !process.env.SUPPORT_MAIL &&
+  !process.env.LOW_STOCK_THRESHOLD &&
+  !process.env.CRON_SEND_SEND_EMAIL
 ) {
   throw new Error('Missing environment variable');
 }
@@ -27,4 +35,5 @@ module.exports = {
   CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
   SUPPORT_MAIL: process.env.SUPPORT_MAIL || 'mathanmithun8838@gmail.com',
   LOW_STOCK_THRESHOLD: process.env.LOW_STOCK_THRESHOLD || 5,
+  CRON_SEND_SEND_EMAIL: process.env.CRON_SEND_SEND_EMAIL || '0 4 * * *',
 };

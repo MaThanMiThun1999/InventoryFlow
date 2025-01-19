@@ -1,8 +1,6 @@
-// config/nodemailer.js
 const nodemailer = require("nodemailer");
 const { MAILER_EMAILID, MAILER_PASSWORD, APP_NAME } = require("./envConfig");
 
-// Create the transporter object
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -10,7 +8,7 @@ const transporter = nodemailer.createTransport({
     pass: MAILER_PASSWORD,
   },
   tls: {
-    rejectUnauthorized: false, // Disable certificate validation in development (optional)
+    rejectUnauthorized: false,
   },
 });
 

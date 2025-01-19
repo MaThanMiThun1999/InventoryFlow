@@ -1,4 +1,3 @@
-// routes/product.routes.js
 const express = require('express');
 const {
   createProduct,

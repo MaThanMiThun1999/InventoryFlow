@@ -1,4 +1,3 @@
-// routes/notification.routes.js
 const express = require('express');
 const {
   getAllNotifications,

@@ -1,4 +1,3 @@
-// dateFormatter.js
 function formatTime(format = 'hh:mm A') {
   const now = new Date();
 

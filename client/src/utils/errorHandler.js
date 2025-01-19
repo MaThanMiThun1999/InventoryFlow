@@ -1,4 +1,3 @@
-// src/utils/errorHandler.js
 import toast from 'react-hot-toast';
 
 export const handleError = (error, setError = null) => {

@@ -1,5 +1,3 @@
-// services/emailService.js
-
 const { CLIENT_URL, APP_NAME, SUPPORT_MAIL } = require('../config/envConfig');
 const sendEmail = require('../config/nodemailer');
 const {
@@ -9,7 +7,7 @@ const {
   WELCOME_EMAIL_TEMPLATE,
 } = require('../utils/emailTemplates');
 
-const regardsMessage = `Your ${APP_NAME} Team`;
+const regardsMessage = `Your Real Tech Systems Team`;
 
 const sendVerificationEmail = async (email, verificationToken) => {
   const mailOptions = {

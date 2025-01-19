@@ -1,4 +1,3 @@
-// src/utils/responseHandler.js
 import toast from 'react-hot-toast';
 
 export const handleResponse = (response, successMessage = null) => {
@@ -16,9 +15,7 @@ export const handleError = (error, setError) => {
     error?.response?.data?.message || 'An unexpected error occurred';
   console.error(errorMessage);
 
-  // Display error using toast
   toast.error(errorMessage);
-  // Update error state if setError is provided
   if (setError) {
     setError(errorMessage);
   }

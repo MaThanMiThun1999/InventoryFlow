@@ -1,4 +1,3 @@
-// controllers/auth.controller.js
 const {
   handleError,
   sendSuccessResponse,

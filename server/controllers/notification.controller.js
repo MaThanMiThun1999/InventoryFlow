@@ -1,4 +1,3 @@
-// controllers/notification.controller.js
 const notificationModel = require('../models/notification.model');
 const { handleError, sendSuccessResponse } = require('../utils/responseUtils');
 exports.getAllNotifications = async (req, res, next) => {

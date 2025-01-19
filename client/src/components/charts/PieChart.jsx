@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const SimplePieChart = ({ data, dataKey, nameKey, colors }) => {
-  // Validate input to avoid potential runtime issues
   if (!data || !Array.isArray(data) || data.length === 0) {
     return <div>No data available to display</div>;
   }
@@ -35,12 +34,10 @@ const SimplePieChart = ({ data, dataKey, nameKey, colors }) => {
   );
 };
 
-// Default Props
 SimplePieChart.defaultProps = {
-  colors: ['#8884d8', '#82ca9d', '#ffc658'], // Default color palette
+  colors: ['#8884d8', '#82ca9d', '#ffc658'],
 };
 
-// PropTypes for validation
 SimplePieChart.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({

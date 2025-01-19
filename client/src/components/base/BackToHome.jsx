@@ -2,10 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const BackToHome = () => {
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate();
 
   const goHome = () => {
-    navigate('/'); // Navigate to the home page (assuming home is at '/')
+    navigate('/');
   };
 
   return (

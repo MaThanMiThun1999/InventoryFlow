@@ -1,4 +1,3 @@
-// controllers/employee.controller.js
 const { handleError, sendSuccessResponse } = require('../utils/responseUtils');
 const { hashPassword, comparePassword } = require('../utils/passwordUtils');
 const userModel = require('../models/user.model');

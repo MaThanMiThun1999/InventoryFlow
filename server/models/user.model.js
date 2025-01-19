@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Define the user schema
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -42,7 +41,7 @@ const userSchema = new mongoose.Schema(
     },
     isVerified: {
       type: Boolean,
-      default: false, // Email verification status
+      default: false,
     },
     verificationToken: {
       type: String,
@@ -54,7 +53,7 @@ const userSchema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true, // Automatically creates `createdAt` and `updatedAt` fields
+    timestamps: true,
   }
 );
 

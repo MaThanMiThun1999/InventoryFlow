@@ -1,4 +1,3 @@
-// controllers/product.controller.js
 const {
   handleError,
   sendSuccessResponse,
@@ -295,6 +294,8 @@ exports.filterProducts = async (req, res, next) => {
 exports.checkAndSendLowStockAlerts = async () => {
   try {
     // Find products with stock below the threshold
+        console.log('Low stock alert function started');
+        console.log('Threshold:', LOW_STOCK_THRESHOLD);
     const threshold = LOW_STOCK_THRESHOLD;
     const lowStockProducts = await productModel
       .find({
@@ -302,16 +303,19 @@ exports.checkAndSendLowStockAlerts = async () => {
         status: { $ne: 'out-of-stock' },
       })
       .populate({ path: 'createdBy', select: 'name email role' });
-
+console.log('lowStockProducts: ', lowStockProducts);  
     if (lowStockProducts.length > 0) {
       const adminUsers = await userModel.find({ role: 'admin' });
+      console.log('adminUsers: ', adminUsers);
       const adminEmails = adminUsers.map((admin) => admin.email);
+      console.log('adminEmails: ', adminEmails);
 
       const productMessages = lowStockProducts.map(
         (product) =>
           `Product "${product.name}" is low in stock with only ${product.stock} items.`
       );
       for (const adminEmail of adminEmails) {
+        console.log('adminEmail: ', adminEmail);
         const mailOptions = {
           to: adminEmail,
           subject: 'Low Stock Alert',
@@ -329,6 +333,8 @@ exports.checkAndSendLowStockAlerts = async () => {
       }
     }
   } catch (error) {
+    console.log('error: ', error);
     console.error('Error checking and sending low stock alerts:', error);
   }
 };
+

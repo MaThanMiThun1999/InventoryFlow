@@ -1,7 +1,6 @@
 const cloudinary = require("../config/cloudinary");
 const streamifier = require("streamifier");
 
-// Function to handle image uploads
 const uploadImage = (fileBuffer) => {
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream(

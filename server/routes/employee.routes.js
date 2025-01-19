@@ -1,4 +1,3 @@
-// routes/employee.routes.js
 const express = require('express');
 const {
   createEmployee,

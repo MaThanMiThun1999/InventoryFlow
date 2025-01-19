@@ -9,8 +9,6 @@ import UserLayout from './layouts/UserLayout';
 import UserAuthLayout from './layouts/UserAuthLayout';
 import AdminLayout from './layouts/AdminLayout';
 
-// Common Pages
-
 // Protected Routes
 import ProtectedRoute from './routes/ProtectedRoute';
 import RedirectAuthenticatedUsers from './routes/RedirectAuthenticatedUsers';
@@ -41,9 +39,9 @@ export default function Router() {
 
   useEffect(() => {
     const timeout = setTimeout(() => setLoading(false), 100);
-    checkAuth(); // Check authentication on mount
+    checkAuth(); 
 
-    return () => clearTimeout(timeout); // Cleanup timeout
+    return () => clearTimeout(timeout);
   }, [checkAuth]);
 
   if (loading) {

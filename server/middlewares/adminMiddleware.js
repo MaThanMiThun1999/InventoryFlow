@@ -1,4 +1,3 @@
-// middlewares/adminMiddleware.js
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
 const { JWT_SECRET } = require("../config/envConfig");
