@@ -100,6 +100,7 @@ const server = app.listen(PORT, () => {
   );
 });
 // Schedule job to run at 10:00 AM IST daily
+logger.info(`Client url: ${CLIENT_URL}`.green.bold);
 console.log(CRON_SEND_SEND_EMAIL);
 cron.schedule(
   CRON_SEND_SEND_EMAIL,
